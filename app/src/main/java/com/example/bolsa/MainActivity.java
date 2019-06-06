@@ -41,14 +41,13 @@ public class MainActivity extends AppCompatActivity {
 
         name.setText(bundle.getString("nombre", ""));
 
-        Hilo mihilo = new Hilo(5, 3000);
+        Hilo mihilo = new Hilo(10, 3000);
         mihilo.start();
 
         comprar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if(!compra){
                     n1 = Integer.parseInt(cap.getText().toString());
                     tva += valaux;
                     total = n1 - valaux;
@@ -59,8 +58,6 @@ public class MainActivity extends AppCompatActivity {
                     totaA.setText(tva+"");
 
                     compra = true;
-                }
-
 
             }
         });
